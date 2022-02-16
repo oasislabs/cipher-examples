@@ -1,0 +1,11 @@
+[package]
+name = "vigil-types"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cbor = { version = "0.2.1", package = "oasis-cbor" }
+oasis-contract-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+thiserror = "1.0.30"

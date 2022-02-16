@@ -1,0 +1,25 @@
+[workspace]
+members = ["types"]
+
+[package]
+name = "vigil"
+description = "A dead-person's switch on Cipher."
+version = "0.1.0"
+authors = ["Nick Hynes <nhynes@oasislabs.com>"]
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+oasis-contract-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+oasis-contract-sdk-storage = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+vigil-types = { path = "types" }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true
