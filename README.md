@@ -14,7 +14,7 @@ the confidential Oasis Wasm ParaTime.
 2. Compile a contract using `cargo build --release --target wasm32-unknown-unknown`
 3. Optionally, optimize the contract using [wasm-opt](https://github.com/WebAssembly/binaryen)
    ```
-   TARGET_DIR="target/wasm32-unknown-unknown/release/"
+   TARGET_DIR="target/wasm32-unknown-unknown/release"
    wasm-opt "${TARGET_DIR}/<contract>.wasm" -o "${TARGET_DIR}/<contract>.opt.wasm" -O3 -c
    ```
 4. Upload the contract: `oasis contracts upload "${TARGET_DIR}/<contract>[.opt].wasm"`
