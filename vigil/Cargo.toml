@@ -14,7 +14,7 @@ oasis-contract-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
 oasis-contract-sdk-storage = { git = "https://github.com/oasisprotocol/oasis-sdk" }
 vigil-types = { path = "types" }
 
-[dev-dependencies]
+[dev-dependencies] # For integration tests against an in-process runtime.
 cbor = { version = "0.2.1", package = "oasis-cbor" }
 oasis-runtime-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
 oasis-runtime-sdk-contracts = { git = "https://github.com/oasisprotocol/oasis-sdk" }
