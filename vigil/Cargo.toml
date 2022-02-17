@@ -1,0 +1,21 @@
+[package]
+name = "vigil"
+description = "A dead-person's switch on Cipher."
+version = "0.1.0"
+authors = ["Nick Hynes <nhynes@oasislabs.com>"]
+edition = "2021"
+license = "AGPL-3.0-or-later"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+oasis-contract-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+oasis-contract-sdk-storage = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+vigil-types = { path = "types" }
+
+[dev-dependencies]
+cbor = { version = "0.2.1", package = "oasis-cbor" }
+oasis-runtime-sdk = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+oasis-runtime-sdk-contracts = { git = "https://github.com/oasisprotocol/oasis-sdk" }
+snap = "1.0.5"

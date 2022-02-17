@@ -202,8 +202,7 @@ impl sdk::Contract for Vigil {
         _ctx: &mut C,
         _reply: Reply,
     ) -> Result<Option<Self::Response>, Error> {
-        // This contract does not call other contracts, so receiving a reply is erroneous.
-        Err(Error::BadRequest)
+        Ok(None)
     }
 
     fn pre_upgrade<C: sdk::Context>(_ctx: &mut C, _request: Self::Request) -> Result<(), Error> {
